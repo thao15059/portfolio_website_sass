@@ -28,9 +28,9 @@
   background: #333;
 }
 
-button[class^="btn"]:hover,
-a[class^="btn"]:hover,
-input[class^="btn"]:hover {
+button[class^="btn-"]:hover,
+a[class^="btn-"]:hover,
+input[class^="btn-"]:hover {
   background: #ffbc00;
 }
 
@@ -75,11 +75,24 @@ input[class^="btn"]:hover {
   margin: 4rem 0;
 }
 
+.section-title {
+  font-size: 2rem;
+  display: block;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.bottom-line {
+  height: 2px;
+  width: 3rem;
+  background: #ffbc00;
+  display: block;
+  margin: auto;
+}
+
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 html {
@@ -215,5 +228,44 @@ img {
 #home-b .stats li.stats-number {
   font-size: 2rem;
   font-weight: 700;
+}
+
+#home-c .process {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  text-align: center;
+}
+
+#home-c .process-step {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 28px;
+  background: #ffbc00;
+  color: #fff;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  line-height: 15px;
+  padding: 1rem;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+#home-c .process-icon {
+  border-radius: 50%;
+  background: #333;
+  color: #fff;
+  padding: 2rem;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  position: relative;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 /*# sourceMappingURL=main.css.map */
