@@ -78,7 +78,7 @@ img {
 // Header
 #header {
   &-home {
-    background: $bg-img no-repeat center center/cover;
+    background: $bg-img no-repeat center right/cover;
     height: 100vh;
     color: #fff;
 
@@ -93,10 +93,13 @@ img {
   }
 
   &-inner {
+    background: $bg-img no-repeat 20% 30% / cover;
+    height: 5.5rem;
+    border-bottom: 3px solid $main-color;
   }
 }
 
-// Home A
+// Home
 #home {
   &-a {
     .specials {
@@ -216,6 +219,111 @@ img {
 
       &:hover {
         background: $main-color;
+      }
+    }
+  }
+}
+
+// About
+#about {
+  &-a {
+    .about-info {
+      display: grid;
+      grid-template-areas:
+        "bioimage bio bio"
+        "aw1      aw2 aw3";
+      gap: 1rem;
+    }
+
+    .bio-img {
+      grid-area: bioimage;
+    }
+
+    .bio {
+      grid-area: bio;
+      padding: 1rem;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    }
+
+    .award-1 {
+      grid-area: aw1;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    }
+    .award-2 {
+      grid-area: aw2;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    }
+    .award-3 {
+      grid-area: aw3;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    }
+
+    .award-1 .fas,
+    .award-2 .fas,
+    .award-3 .fas {
+      color: $main-color;
+      padding: 1rem;
+    }
+  }
+
+  &-b {
+    .progress {
+      overflow: hidden;
+      height: 20px;
+      background: $medium-color;
+      margin: 0.3rem 0;
+
+      div {
+        height: 100%;
+        color: #fff;
+        text-align: center;
+        background: $main-color;
+        transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+          rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  &-c {
+    .about-logos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+
+      img {
+        width: 70%;
+      }
+    }
+  }
+
+  &-d {
+    .testimonials {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(4, 1fr);
+
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      p {
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+          rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        padding: 1rem;
+      }
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        padding: 1rem;
       }
     }
   }
